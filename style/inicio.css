@@ -1,0 +1,27 @@
+.botao-catador {
+    background-color: #086C4C; /* Cor verde clara */
+    color: white;
+    border: none;
+}
+
+.botao-catador:hover {
+    background-color: #043c2a;
+    color: white;
+    border: none;
+}
+
+.botao-cidadao {
+    background-color: #005265; /* Verde escuro */
+    color: white;
+    border: none;
+}
+
+.botao-cidadao:hover {
+    background-color: #022c35;
+    color: white;
+    border: none;
+}
+
+.text-center {
+    color: #086074;
+}
