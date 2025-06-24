@@ -1,58 +1,97 @@
-.login-container {
-    width: 100%;
-    padding: 15px;
+:root {
+    --primary-color: #005265;
+    --secondary-color: #6BCB77;
+    --light-bg: #f8f9fa;
 }
 
-.login-box {
-    max-width: 400px;
-    width: 100%;
-    margin: auto;
-    padding: 30px;
-    background: white;
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--light-bg);
+}
+
+.cadastro-card {
+    border: none;
     border-radius: 12px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
-}
-
-.fs-3{
-    color: #005265;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
 }
 
 .logo {
-    max-width: 100%;
+    max-width: 180px;
     height: auto;
 }
 
-.form-control:focus {
-    border-color: #6BCB77;
+h1 {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border: none;
+    font-weight: 500;
+    transition: all 0.2s;
+}
+
+.btn-primary:hover {
+    background-color: #003d4d;
+    transform: translateY(-1px);
+}
+
+.form-control, .form-select {
+    padding: 0.75rem;
+    border-radius: 8px;
+    border: 1px solid #dee2e6;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: var(--secondary-color);
     box-shadow: 0 0 0 0.2rem rgba(107, 203, 119, 0.25);
 }
 
-.btn-recytech {
-    background-color: #005265;
-    color: white;
-    border: none;
-    padding: 10px;
+.input-group-text {
+    background-color: #f8f9fa;
+    border-right: none;
 }
 
-.btn-recytech:hover {
-    background-color: #00262f;
-    color: white;
+.input-group .form-control {
+    border-left: none;
 }
 
-/* Media Queries para diferentes tamanhos de tela */
-@media (max-width: 576px) {
-    .login-box {
-        padding: 20px;
+.toggle-password {
+    border-left: none;
+    background-color: #f8f9fa;
+}
+
+.form-check-input:checked {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+a.text-primary {
+    color: var(--primary-color) !important;
+    font-weight: 500;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .cadastro-card {
+        box-shadow: none;
+        border: 1px solid #dee2e6;
     }
     
     body {
-        padding: 15px;
-        align-items: flex-start;
+        background-color: white;
+        padding-top: 2rem;
     }
 }
 
-@media (min-width: 577px) and (max-width: 768px) {
-    .login-box {
-        max-width: 350px;
+@media (max-width: 576px) {
+    .logo {
+        max-width: 150px;
+    }
+    
+    .cadastro-card .card-body {
+        padding: 1.5rem;
     }
 }
