@@ -67,32 +67,3 @@ document.getElementById('fullscreen-btn').addEventListener('click', function() {
         }
     }
 });
-
-// Controles adicionais
-const zoomControl = L.control.zoom({
-    position: 'topright'
-}).addTo(map);
-
-// Camada de tráfego (opcional)
-L.tileLayer('https://{s}.tile.thunderforest.com/transport/{z}/{x}/{y}.png?apikey=YOUR_API_KEY', {
-    attribution: '&copy; <a href="https://www.thunderforest.com/">Thunderforest</a>',
-    maxZoom: 22
-}).addTo(map);
-
-// Adiciona busca de localização
-const geocoder = L.Control.geocoder({
-    defaultMarkGeocode: false,
-    position: 'topleft'
-}).addTo(map);
-
-geocoder.on('markgeocode', function(e) {
-    map.setView(e.geocode.center, 15);
-    L.marker(e.geocode.center).addTo(map)
-        .bindPopup(e.geocode.name)
-        .openPopup();
-});
-
-// Atualiza o tamanho do mapa quando a janela for redimensionada
-window.addEventListener('resize', function() {
-    map.invalidateSize();
-});
