@@ -1,0 +1,317 @@
+/* home-usuario.css - Estilos para a versão mobile */
+
+:root {
+    --recytech-primary: #005265;
+    --recytech-secondary: #6BCB77;
+    --recytech-light: #f8f9fa;
+    --recytech-dark: #212529;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--recytech-light);
+    padding-bottom: 70px;
+    /* Espaço para o menu fixo */
+}
+
+/* Container principal */
+.container {
+    max-width: 100%;
+    padding: 0 15px;
+}
+
+
+.row.mt-3.mb-4 img {
+    max-height: 80px;
+    width: auto;
+}
+
+/* Estilos para o mapa */
+#map {
+    border: 1px solid #ddd;
+    margin-bottom: 15px;
+}
+
+/* Seção de endereços */
+.row.px-3.mb-3 h3 {
+    color: var(--recytech-primary);
+    font-weight: 600;
+    font-size: 1.3rem;
+}
+
+.row.px-3.mb-3 h5 {
+    font-size: 1rem;
+    color: #6c757d;
+}
+
+/* Cards de endereço */
+.card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.card p.text-center {
+    margin-bottom: 0;
+    font-size: 0.95rem;
+    color: var(--recytech-dark);
+}
+
+/* Botões */
+.btn-outline-primary {
+    border-color: var(--recytech-primary);
+    color: var(--recytech-primary);
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--recytech-primary);
+    color: white;
+}
+
+/* Menu inferior fixo */
+.navbar-mobile {
+    height: 70px;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.navbar-mobile .container-fluid {
+    padding: 0;
+}
+
+.navbar-mobile .row.w-100 {
+    height: 100%;
+    margin: 0;
+}
+
+.navbar-mobile .col-3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+}
+
+.navbar-mobile a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.navbar-mobile i {
+    font-size: 1.5rem;
+    margin-bottom: 3px;
+}
+
+.navbar-mobile .small {
+    font-size: 0.7rem;
+}
+
+.navbar-mobile .text-success {
+    color: var(--recytech-primary) !important;
+}
+
+.navbar-mobile .text-muted {
+    color: #6c757d !important;
+}
+
+.navbar-mobile a:hover {
+    transform: translateY(-3px);
+}
+
+/* Efeito para o item ativo */
+.navbar-mobile .active i,
+.navbar-mobile .active .small {
+    color: var(--recytech-primary) !important;
+    font-weight: 500;
+}
+
+/* Responsividade adicional */
+@media (max-width: 350px) {
+    .navbar-mobile .small {
+        font-size: 0.6rem;
+    }
+
+    .navbar-mobile i {
+        font-size: 1.3rem;
+    }
+}
+
+/* Layout Desktop */
+.desktop-layout {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    min-height: 100vh;
+}
+
+/* Sidebar */
+.desktop-sidebar {
+    background: linear-gradient(180deg, var(--recytech-primary) 0%, #003d4d 100%);
+    color: white;
+    padding: 25px 0;
+    box-shadow: 3px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.desktop-logo {
+    padding: 0 25px 25px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 20px;
+}
+
+.desktop-logo img {
+    max-width: 180px;
+}
+
+.desktop-menu {
+    padding: 0 15px;
+}
+
+.desktop-menu .nav-item {
+    margin-bottom: 5px;
+    border-left: 3px solid transparent;
+    transition: all 0.3s;
+}
+
+.desktop-menu .nav-item:hover,
+.desktop-menu .nav-item.active {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-left: 3px solid var(--recytech-secondary);
+}
+
+.desktop-menu .nav-link {
+    color: rgba(255, 255, 255, 0.85);
+    padding: 12px 20px;
+}
+
+.desktop-menu .nav-link:hover,
+.desktop-menu .nav-link.active {
+    color: white;
+}
+
+.desktop-menu .nav-link i {
+    width: 24px;
+    text-align: center;
+    margin-right: 10px;
+}
+
+/* Conteúdo Principal */
+.desktop-content {
+    padding: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.desktop-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+}
+
+.user-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--recytech-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    font-weight: bold;
+    color: var(--recytech-primary);
+}
+
+.location-badge {
+    background-color: #e3f2ed;
+    color: var(--recytech-primary);
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+}
+
+/* Cards */
+.dashboard-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s;
+    border: none;
+    overflow: hidden;
+    margin-bottom: 25px;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.address-card {
+    border-left: 4px solid var(--recytech-secondary);
+}
+
+.map-container {
+    height: 400px;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+}
+
+#map {
+    height: 100%;
+    width: 100%;
+    border-radius: 12px;
+}
+
+.map-controls {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 1000;
+}
+
+/* Botões */
+.btn-recytech {
+    background-color: var(--recytech-primary);
+    color: white;
+    border: none;
+    padding: 8px 15px;
+}
+
+.btn-recytech:hover {
+    background-color: #003d4d;
+    color: white;
+}
+
+.btn-outline-recytech {
+    border-color: var(--recytech-primary);
+    color: var(--recytech-primary);
+}
+
+.btn-outline-recytech:hover {
+    background-color: var(--recytech-primary);
+    color: white;
+}
+
+/* Seção Endereços */
+.address-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
